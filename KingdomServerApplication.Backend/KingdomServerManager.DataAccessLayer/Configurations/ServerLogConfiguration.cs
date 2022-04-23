@@ -21,6 +21,9 @@ internal class ServerLogConfiguration : BaseEntityConfiguration<ServerLog>
             .HasMaxLength(512)
             .IsRequired();
 
+        builder.Property(l => l.LogDate)
+            .IsRequired();
+
         builder.Property(l => l.LogType)
             .HasConversion<string>()
             .HasMaxLength(25)

@@ -9,5 +9,6 @@ public class ServerLog : BaseEntity
     public User User { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
+    public DateTime LogDate { get; set; }
     public LogType LogType { get; set; }
 }

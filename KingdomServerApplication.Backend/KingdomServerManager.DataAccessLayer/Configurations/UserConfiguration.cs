@@ -17,7 +17,7 @@ internal class UserConfiguration : BaseEntityConfiguration<User>
             .HasMaxLength(256)
             .IsRequired();
 
-        builder.Property(u => u.ServerName)
+        builder.Property(u => u.ServerUserName)
             .HasMaxLength(256)
             .IsRequired();
 
