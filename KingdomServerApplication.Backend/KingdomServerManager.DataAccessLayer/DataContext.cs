@@ -39,6 +39,9 @@ public class DataContext : DbContext, IDataContext
 
     public void Insert<T>(T entity) where T : BaseEntity
     {
+        entity.CreatedDate = DateTime.UtcNow;
+        entity.LastModifiedDate = null;
+
         var set = Set<T>();
         set.Add(entity);
     }
