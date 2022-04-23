@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KingdomServerManager.DataAccessLayer;
 
-public class DataContext : DbContext, IDataContext
+public class DataContext : DbContext, IDataContext, IReadOnlyDataContext
 {
     public DataContext(DbContextOptions<DataContext> options) : base(options)
     {
