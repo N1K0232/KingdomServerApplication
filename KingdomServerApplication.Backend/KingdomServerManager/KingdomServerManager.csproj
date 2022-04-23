@@ -6,11 +6,17 @@
 		</PropertyGroup>
 
 		<ItemGroup>
-				<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+				<PackageReference Include="Hellang.Middleware.ProblemDetails" Version="6.4.1" />
+				<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+				<PackageReference Include="TinyHelpers" Version="1.5.18" />
 		</ItemGroup>
 
 		<ItemGroup>
 				<Folder Include="Controllers\" />
+		</ItemGroup>
+
+		<ItemGroup>
+		  <ProjectReference Include="..\KingdomServerManager.BusinessLayer\KingdomServerManager.BusinessLayer.csproj" />
 		</ItemGroup>
 
 </Project>
