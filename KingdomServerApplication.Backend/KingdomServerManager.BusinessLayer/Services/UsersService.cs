@@ -26,6 +26,13 @@ public class UsersService : IUsersService
         dataContext.Delete(dbUser);
         await dataContext.SaveAsync();
     }
+    public async Task DeleteAsync(string userName)
+    {
+        var query = dataContext.GetData<Entities.User>();
+        var dbUser = await query.FirstOrDefaultAsync(u => u.UserName == userName);
+        dataContext.Delete(dbUser);
+        await dataContext.SaveAsync();
+    }
     public async Task<User> GetAsync(string userName)
     {
         var query = dataContext.GetData<Entities.User>();
